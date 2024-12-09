@@ -1,0 +1,23 @@
+﻿using Wpm.Management.Domain.ValueObjects;
+using Wpm.SharedKernel;
+
+namespace Wpm.Management.Domain.Entities;
+
+public class Breed : Entity
+{
+
+    public Breed(Guid id,
+        string name,
+    WeightRange maleIdealWeight,
+    WeightRange femaleIdealWeight)
+    {
+        Id = id;
+        Name = name;
+        MaleIdealWeight = maleIdealWeight;
+        FemaleIdealWeight = femaleIdealWeight;
+
+    }
+    public string? Name { get; init; }
+    public WeightRange MaleIdealWeight { get; init; }
+    public WeightRange FemaleIdealWeight { get; init; }
+}
